@@ -4,13 +4,18 @@
 #include <iostream>
 using namespace std;
 
+#include "token.h"
+
 #include <string>
+#include <vector>
 
 class asciifilter{
 public:
-    asciifilter();
+    asciifilter(string l);
     string line;
-    char extract_ascii(void);
+    vector<char> chars;
+    vector<char> extract_ascii(void);
+    token * classify_char(char c);
 };
 
 #endif

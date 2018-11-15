@@ -1,5 +1,5 @@
-copilador: compilador.cpp filesystem.cpp
-	g++ -o compilador compilador.cpp filesystem.cpp
+copilador: compilador.cpp filesystem.cpp asciifilter.cpp token.cpp
+	g++ -o compilador compilador.cpp filesystem.cpp asciifilter.cpp token.cpp
 
 clean:
 	rm -rf *.o

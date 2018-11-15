@@ -13,8 +13,8 @@ public:
     string file;
     filesystem(string f);
     void open_file(ifstream& f);
-    void close_file(ifstream f);
-    void read_line(string line);
+    void close_file(ifstream& f);
+    string read_line(ifstream& f);
     void end_line(void);
 };
 

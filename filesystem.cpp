@@ -12,7 +12,6 @@ using namespace std;
 filesystem::filesystem(string f)
 {
     this->file = f;
-    
 }
 
 void filesystem::open_file(ifstream& file)
@@ -25,8 +24,11 @@ void filesystem::close_file(ifstream& file)
     file.close();
 }
 
-void filesystem::read_line(ifstream& file)
+string filesystem::read_line(ifstream& file)
 {
-    
+    string line;
+    getline(file,line);
+    line.erase(line.size(), 1);
+    return line;
 }
 
