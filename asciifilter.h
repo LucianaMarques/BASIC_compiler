@@ -15,7 +15,7 @@ public:
     asciifilter(string l);
     string line;
     vector<char> chars;
-    vector<char> extract_ascii(void);
+    void extract_ascii(vector<char>& v);
     asciicharacter * classify_char(char c);
 };
 

@@ -7,15 +7,13 @@ asciifilter::asciifilter(string l)
     this->line = l;
 }
 
-vector<char> asciifilter::extract_ascii()
+void asciifilter::extract_ascii(vector<char>& v)
 {
-    vector<char> v; 
     for (int i = 0; i < this->line.size(); i++)
     {
+        cout << this->line[i] << endl;
         v.push_back(this->line[i]);
     }
-    this->chars = v;
-    return v;
 }
 
 asciicharacter * asciifilter::classify_char(char c)
