@@ -1,5 +1,6 @@
 #include "asciifilter.h"
 #include "token.h"
+#include "asciicharacter.h"
 
 asciifilter::asciifilter(string l)
 {
@@ -17,10 +18,9 @@ vector<char> asciifilter::extract_ascii()
     return v;
 }
 
-token * asciifilter::classify_char(char c)
+asciicharacter * asciifilter::classify_char(char c)
 {
-    string s; 
-    s.push_back(c);
-    token * t = new token(s);
-    return t;
+    asciicharacter * ch = new asciicharacter(c);
+    ch->categorize();
+    return ch;
 }

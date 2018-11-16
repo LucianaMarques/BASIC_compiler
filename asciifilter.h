@@ -5,6 +5,7 @@
 using namespace std;
 
 #include "token.h"
+#include "asciicharacter.h"
 
 #include <string>
 #include <vector>
@@ -15,7 +16,7 @@ public:
     string line;
     vector<char> chars;
     vector<char> extract_ascii(void);
-    token * classify_char(char c);
+    asciicharacter * classify_char(char c);
 };
 
 #endif

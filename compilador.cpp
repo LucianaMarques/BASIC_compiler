@@ -2,6 +2,7 @@
 #include <string>
 #include "filesystem.h"
 #include "asciifilter.h"
+#include "asciicharacter.h"
 using namespace std;
 
 //lista ligada de eventos
@@ -20,13 +21,11 @@ int main()
         line = file_system->read_line(file);
         ascii_filter->line = line;
         vector<char> vec = ascii_filter->extract_ascii();
-        vector<token *> tokens;
+        vector<asciicharacter *> characters;
         for (int i = 0; i < vec.size(); i ++)
         {
-            string k;
-            k.push_back(vec[i]);
-            token * tok = new token(k);
-            tokens.push_back(tok);
+            asciicharacter * a = new asciicharacter(vec[i]);
+            characters.push_back(a);
         }
     }
     file_system->close_file(file);
