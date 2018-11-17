@@ -6,6 +6,8 @@ using namespace std;
 #include "asciifilter.h"
 #include "asciicharacter.h"
 #include "evento.h"
+#include "lexicanalyzer.h"
+#include "token.h"
 
 #include <queue>
 
@@ -25,6 +27,10 @@ vector<string> lines;
 // ASCII Characters
 vector<char> vec;
 vector<asciicharacter *> characters;
+
+// Tokens from pre-alaysis
+
+vector<token *> tokens;
 
 /**************************************/
 

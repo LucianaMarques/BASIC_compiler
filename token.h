@@ -8,10 +8,9 @@ using namespace std;
 
 class token{
 public:
-    token(string key);
-    string c;
-    char category;
-    char type;
+    token(string t, string k);
+    string key;
+    string type;
 };
 
 #endif

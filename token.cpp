@@ -1,7 +1,8 @@
 #include "token.h"
 
-token::token(string key)
+token::token(string t, string k)
 {
-    this->c = key;
+    this->type = t;
+    this->type = k;
 }
 
